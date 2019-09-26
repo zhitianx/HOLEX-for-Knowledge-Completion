@@ -1,0 +1,13 @@
+FROM tensorflow/tensorflow:1.8.0-py3
+
+WORKDIR /src
+COPY ProjE_softmax_rescal.py ProjE_softmax_rescal.py
+
+ENV BATCHSIZE=512
+ENV DC=64
+ENV DIM=64
+ENV HAAR=4
+ENV MAXITER=50
+ENV WORKERS=24
+
+ENTRYPOINT python ProjE_softmax_rescal.py --data /data --eval_batch 500 --generator 10 --lr 5e-4 --neg_weight 0.1 --save_dir /models --batch $BATCHSIZE --dc $DC --dim $DIM --haar $HAAR --max_iter $MAXITER --worker $WORKERS

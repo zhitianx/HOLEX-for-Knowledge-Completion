@@ -1,0 +1,25 @@
+description: >-
+  Proje_softmax_noweight, FB15k, using batch size 128, $DC random vectors, 50
+  iters, 24 workers
+tasks:
+  - name: proje_fb15k_tune_dc
+    spec:
+      blueprint: bp_xq5ca3ljkhwd
+      resultPath: /models
+      env:
+        BATCHSIZE: '128'
+        DC: $DC
+        DIM: '32'
+        HAAR: '0'
+        MAXITER: '50'
+        NEGWEIGHT: '0.1'
+        WORKERS: '24'
+      requirements:
+        cpu: 32
+        memory: 1024Mi
+      description: >-
+        Proje_softmax_noweight, FB15k, using batch size 128, $DC random vectors,
+        50 iters, 24 workers
+      datasetMounts:
+        - datasetId: ds_o06igw47f64x
+          containerPath: /data

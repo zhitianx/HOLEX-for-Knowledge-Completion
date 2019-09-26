@@ -1,0 +1,21 @@
+description: Proje_softmax_noweight, FB15k, using batch size $BATCHSIZE, $DC random vectors, 50 iters, 24 workers
+tasks:
+  - name: proje_nips2018-rvec-scaling
+    spec:
+      blueprint: ashishs/proje_nips2018
+      resultPath: /models
+      description: Proje_softmax_noweight, FB15k, using batch size $BATCHSIZE, $DC random vectors, 50 iters, 24 workers
+      env:
+        BATCHSIZE: $BATCHSIZE
+        DC: $DC
+        NEGWEIGHT: '0.1'
+        DIM: '256'
+        HAAR: '0'
+        MAXITER: '50'
+        WORKERS: '24'
+      datasetMounts:
+        - datasetId: ashishs/FB15k
+          containerPath: /data
+      requirements:
+        cpu: 24
+        memory: 1024Mi

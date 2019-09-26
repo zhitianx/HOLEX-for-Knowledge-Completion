@@ -1,0 +1,20 @@
+description: Proje_softmax_noweight_rvec_harr_linear, FB15k, using batch size 128, embedding size 128, $DC random vectors, 50 iters, 24 workers
+tasks:
+  - name: proje_holox_hypertune_dc
+    spec:
+      blueprint: bp_zlawpol7sy5z  
+      resultPath: /models
+      description: Proje_softmax_noweight_rvec_harr_linear, FB15k, using batch size 128,embedding size 128,  $DC random vectors, 50 iters, 24 workers
+      env:
+        BATCHSIZE: '128'
+        DC: $DC
+        DIM: '128'
+        HAAR: '0'
+        MAXITER: '50'
+        WORKERS: '24'
+      datasetMounts:
+        - datasetId: ds_2nbvw4tiua9q
+          containerPath: /data
+      requirements:
+        cpu: 32
+        memory: 1024Mi

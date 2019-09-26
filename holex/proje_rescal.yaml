@@ -1,0 +1,20 @@
+description: Proje_softmax_rescal, FB15k, using batch size $BATCHSIZE, $DC random vectors, 50 iters, 24 workers
+tasks:
+  - name: proje_rescal_test_sparsity
+    spec:
+      blueprint: bp_fuvz0rib6g7k  
+      resultPath: /models
+      description: Proje_softmax_rescal, FB15k, using batch size $BATCHSIZE, $DC random vectors, 50 iters, 24 workers
+      env:
+        BATCHSIZE: 128
+        DC: 32
+        DIM: '32'
+        HAAR: '4'
+        MAXITER: '50'
+        WORKERS: '24'
+      datasetMounts:
+        - datasetId: ds_2nbvw4tiua9q
+          containerPath: /data
+      requirements:
+        cpu: 32
+        memory: 1024Mi

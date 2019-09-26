@@ -1,0 +1,25 @@
+description: >-
+  Proje_softmax_noweight_negfix, YAGO3-10, 30 ITERS, using $DC random vectors,
+  batch size 128, 30 iters, 16 workers
+tasks:
+  - name: proje_yago3-10
+    spec:
+      blueprint: bp_zjd1x4f0uk24
+      resultPath: /models
+      env:
+        BATCHSIZE: '128'
+        DC: $DC
+        DIM: '256'
+        HAAR: '0'
+        MAXITER: '30'
+        NEGWEIGHT: '0.01'
+        WORKERS: '16'
+      requirements:
+        cpu: 32
+        memory: 1024Mi
+      description: >-
+        Proje_softmax_noweight_negfix, YAGO3-10, 30 ITERS, using $DC random 
+        vectors, batch size 128, 30 iters, 16 workers
+      datasetMounts:
+        - datasetId: ds_3aeipt8d0a3v
+          containerPath: /data

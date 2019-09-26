@@ -1,0 +1,6 @@
+model_checkpoint_path: "/models/ProjE_DEFAULT_49.ckpt"
+all_model_checkpoint_paths: "/models/ProjE_DEFAULT_10.ckpt"
+all_model_checkpoint_paths: "/models/ProjE_DEFAULT_20.ckpt"
+all_model_checkpoint_paths: "/models/ProjE_DEFAULT_30.ckpt"
+all_model_checkpoint_paths: "/models/ProjE_DEFAULT_40.ckpt"
+all_model_checkpoint_paths: "/models/ProjE_DEFAULT_49.ckpt"
