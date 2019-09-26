@@ -1,0 +1,10 @@
+{
+  "iterations": 50,
+  "time_per_iteration": 1712,
+  "filtered_mean_rank": 350.01067624352584,
+  "filtered_mean_rank_h": 424.5552135248705,
+  "filtered_mean_rank_t": 275.46613896218116,
+  "filtered_hits10": 0.45634222613114434,
+  "filtered_hits10_h": 0.3450112381510798,
+  "filtered_hits10_t": 0.5676732141112089
+}
